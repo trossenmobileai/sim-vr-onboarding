@@ -23,6 +23,18 @@ Go through the documents in order. Each builds on the previous one.
 
 ---
 
+## Going Deeper: Isaac Lab Task Implementation
+
+Once you have completed the onboarding flow, these implementation notes document the *how* and *why* of the Isaac Lab task environments and teleop scripts that were built for this project.
+
+| Doc | What It Covers |
+| --- | -------------- |
+| [`isaac_lab_teleop/01_lift_task.md`](isaac_lab_teleop/01_lift_task.md) | Gymnasium task registration, robot `ArticulationCfg`, and the first working single-arm Lift environment |
+| [`isaac_lab_teleop/02_dual_arm_reach.md`](isaac_lab_teleop/02_dual_arm_reach.md) | Dual-arm Reach environment, switchable arm teleop script, and all bugs fixed |
+| [`isaac_lab_teleop/03_arm_drift.md`](isaac_lab_teleop/03_arm_drift.md) | Investigation of the slow arm drift observed in simulation — root cause and conclusion |
+
+---
+
 ## Day 1 Checklist
 
 Everything is already set up on the workstation. You do **not** need to reinstall anything. These steps get you oriented and verify that the simulation side is working for you.

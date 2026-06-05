@@ -43,6 +43,13 @@ omni.usd.get_context().get_selection().clear_selected_prim_paths()
 **Cause:** The articulation root prim path is wrong.
 **Fix:** Use `/World/mobile_ai/base_footprint`, not `/World/mobile_ai`.
 
+### S7 — Arms Drift Slowly Even With Zero Input
+
+**Symptom:** Both robot arms drift slowly in simulation even when no teleop input is given and the teleop script is confirmed to be sending all-zero actions.  
+**Cause:** Simulator-level numerical artifact in PhysX constraint solving for this robot model — not a bug in the teleop script. Persists with gravity disabled and high PD gains.  
+**Full investigation:** See [`isaac_lab_teleop/03_arm_drift.md`](isaac_lab_teleop/03_arm_drift.md).  
+**Workaround:** Accept the small drift. Design teleop sessions to be short episodes. Increasing PD gains (stiffness 800, damping 160) may reduce it.
+
 ---
 
 ## VR / ALVR Issues
